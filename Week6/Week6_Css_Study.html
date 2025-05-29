@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Study</title>
+    <style> /*내부파일 이용*/
+        *
+        {
+            margin: 0;
+        }
+        p, h2 /* , 사용으로 중복구문 제거*/
+        {
+            font-style: italic; /*이태릭체*/
+        }
+        h2
+        {
+            padding: 10px;
+            background-color: #222;
+            color:#fff !important; /*우선순위 !important 근데 안씀*/
+            font-size: 42px;
+        }
+        .bg_red
+        {
+            background-color: red;
+            color: white;
+        }
+        #container
+        {
+            width: 500px;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .accent
+        {
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .black-han-sans-regular /*fonts.google.com 에서 폰트 가져와서 쓰는 방법, 클래스 사용하는 방법*/
+        {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        /*@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap'); 다른 방법*/
+    </style>
+    <!-- <link rel="stylesheet" href="style01.css"> 외부파일 이용-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 class="black-han-sans-regular" style = "color:green">2025년 3월 산불 발생에 따른 [재난피해지원 솔뫼특별장학금] 신청 안내</h2>
+    <p>2025년 3월 발생한 산불로 인해 피해를 입은 본교 재학생과 해당 가정의 고통을 공감하고, 경제적 손실에 따른 피해 복구의지 유도 및 학업 지속을 돕기 위하여 재난피해지원 솔뫼특별장학금을 아래와 같이 시행하오니, 해당되는 학생은 신청하여 주시기 바랍니다.</p>
+
+    <p style="color: blue;">▶ 장학금명: 재난피해지원 솔뫼특별장학금</p> <!--inline style-->
+    
+
+
+    <p class = "bg_red accent">▶ 장학금액: ​1인당 최대 지급액 50~100만원(생활비성)</p> <!--class로 부분적 적용가능-->
+
+    <div id="container">※ 예산 상황을 고려하여 1인당 지급액 확정</div>
+    <br><br>
+
+
+
+    ▶ 신청대상(※ 다음 조건을 모두 충족하는 자)<br>
+
+    ① 국립경국대학교 학부 재학생 본인(전문학사 포함) 또는 부모·배우자가 특별재난지역*에서 산불로 인한 피해를 입은 경우<br>
+
+      * 특별재난지역: (경북)안동시·의성군·청송군·영덕군·영양군, (경남)산청군·하동군, (울산)울주군<br>
+
+  ② 「자연재해대책법」제74조에 따른 '피해사실확인서' 발급이 가능한 자<br><br>
+
+
+
+    ▶ 신청기간: ~ 2025. 4. 30.(수) 까지<br><br>
+
+
+
+▶ 신청방법: 신청서류를 구비하여 각 캠퍼스별 장학금 운영 부서 방문 제출<br>
+
+  - (안동캠퍼스) 국립경국대학교 안동캠퍼스 대학본관 별동 1층 학생지원과<br>
+
+  - (예천캠퍼스) 국립경국대학교 예천캠퍼스 대학본관 2층 학생지원팀<br><br>
+
+
+
+▶ 제출서류(※ 필요한 경우 추가 서류를 요청할 수 있음)
+
+  ① 재난피해지원 솔뫼특별장학금 신청서 1부
+
+  ② 피해사실확인서 1부(시·군·구청, 읍·면사무소 등 해당 관공서 발급)
+
+  ③ 가족관계증명서 1부
+
+  ④ 통장사본 1부(학생 명의)
+</body>
+</html>
+
+<!--캐스케이딩 : 계단식으로 적용, 여러 스타일이 적용될때 우선순위를 두고 적용-->

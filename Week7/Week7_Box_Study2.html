@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex</title>
+    <style>
+        div
+        {
+            width: 200px;
+            height: 100px;
+            margin: 30px; /*margin끼리 중첩이 된다.30+30이 되는 것이 아니다.*/
+        }
+        #box1
+        {
+            background-color: red;
+        }
+        #box2
+        {
+            background-color: green;
+        }
+        #box3
+        {
+            background-color: blue;
+        }
+        button
+        {
+            padding: 10px 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+        }
+        #wrapper
+        {
+            width: 210px;
+            margin: 10px auto; /*창 크기만큼 자동으로 여백생성*/
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrapper">
+        <button>버튼1</button>
+        <button>버튼2</button>
+    </div>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+</body>
+</html>

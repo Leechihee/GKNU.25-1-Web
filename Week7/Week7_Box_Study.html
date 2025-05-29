@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box_Study</title>
+    <style>
+        *
+        {
+            margin: 0px;
+        }
+        .box1
+        {
+            width: 400px;
+            height: 300px;
+            border: 1px dashed #cccccc;
+            margin: 20px; /*바깥쪽 여백*/
+            padding: 10px; /*안쪽 여백*/
+            box-sizing: border-box; /*border와 padding까지 넓이에 포함시킨다.*/
+            border-width: 2px 5px 2px 5px; /* top > right > bottom > left 순으로 지정한다.*/
+            /* border-width: 2px 5px;으로 작성하면 2px은 top bottom / 5px은  right left로 지정한다.*/
+            border-top-color: blue; /*부분적으로 색 지정할 수 있다*/
+            border-radius: 25px; /*모서리의 각도를 지정할 수 있다.*/
+        }
+        .box2
+        {
+            width: 70%; /*가변길이 = 브라우저의 창 크기에 따라 달라지는 길이 n%으로 구현*/
+            height: 300px; /*고정길이 = 브라우저의 창 크기와 상관없는 길이 Npx로 구현*/
+            border: 1px solid #f00;
+        }
+        .round
+        {
+            /* border-radius: 50%; 타원형태의 원형으로 */
+            border-top-left-radius: 20px; /*모서리 지정해서 각도지정*/
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img02.png" class="round"alt="">
+    <div class="box1">
+        국립경국대학교(총장 정태주)는 과학기술정보통신부와 정보통신기획평가원(IITP)이 주관하는 2024년 SW중심대학사업 최종평가에서 ‘우수’ 등급을 획득했다. 
+        이번 평가는 2019년부터 6년간 진행된 사업의 종합적인 성과를 평가한 자리로, 국립경국대는 교육 개선, 지역사회 기여, 대학 간 협력 등 다양한 부문에서 탁월한 평가를 받았다.
+        특히 입학 전 SW 교육을 전공 계열별로 세분화해 비전공자도 체계적으로 기초 역량을 갖출 수 있도록 커리큘럼을 구성했다. 또한 지역 고등학교와 연계한 AI·SW 교육 프로그램, 유·초·중등 대상 SW 체험 활동 등 지역사회와의 긴밀한 협력 활동이 두드러졌다는 평가를 받았다.
+    </div>
+    <div class="box2">
+        국립경국대학교(총장 정태주)는 과학기술정보통신부와 정보통신기획평가원(IITP)이 주관하는 2024년 SW중심대학사업 최종평가에서 ‘우수’ 등급을 획득했다. 
+        이번 평가는 2019년부터 6년간 진행된 사업의 종합적인 성과를 평가한 자리로, 국립경국대는 교육 개선, 지역사회 기여, 대학 간 협력 등 다양한 부문에서 탁월한 평가를 받았다.
+        특히 입학 전 SW 교육을 전공 계열별로 세분화해 비전공자도 체계적으로 기초 역량을 갖출 수 있도록 커리큘럼을 구성했다. 또한 지역 고등학교와 연계한 AI·SW 교육 프로그램, 유·초·중등 대상 SW 체험 활동 등 지역사회와의 긴밀한 협력 활동이 두드러졌다는 평가를 받았다.
+    </div>
+</body>
+</html>
+
+<!-- margin = 테두리 밖의 여백 / padding = 테두리 안의 여백 -->

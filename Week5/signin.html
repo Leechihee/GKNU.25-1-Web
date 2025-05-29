@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+        <fieldset> <legend>필수항목</legend>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>아이디</td>
+                        <td>
+                            <input type="text" value='아이디는 영문자와 숫자로 입력하세요.’ onfocus="this.value='';this.style.color='red';" style="color:gray">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width = 300>비밀번호</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호확인</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>성명</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td><input type="email" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td><input type="phone"></td>
+                    </tr>
+                    <tr>
+                        <td>생년월일</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </fieldset>
+        
+        <fieldset>
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="300">취미하나만선택</td>
+                        <td>
+                            <input type="radio" id="hope">게임
+                            <input type="radio" id="hope">음악
+                            <input type="radio" id="hope">낚시
+                            <input type="radio" id="hope">독서
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>글자부분을 선택하세요!</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>좋아하는 음료를 선택</td>
+                        <td>
+                            <input type="checkbox"> 커피종류
+                            <input type="checkbox"> 티종류
+                            <input type="checkbox"> 쉐이크 종류
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>사진업로드</td>
+                        <td><input type="file"></td>
+                    </tr>
+                    <tr>
+                        <td>회의참석가능 날짜와 시간</td>
+                        <td><input type="datetime-local"></td>
+                    </tr>
+                    <tr>
+                        <td>공부해보고싶은 프로그래밍</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="v1">HTML5</option>
+                                <option value="v2">CSS3</option>
+                                <option value="v3">JAVASCRIPT</option>
+                                <option value="v4">JAVA</option>
+                                <option value="v5">PYTHON</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>하고싶은말</td>
+                        <td><textarea name="" id="" width="60" height="30"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+            <legend>선택 항목</legend>
+        </fieldset>
+        <table>
+            <tbody>
+                <tr>
+                    <th width="5000">
+                        <input type="button" value="주문하기">
+                        <input type="button" value="취소하기">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
