@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>코딩 입문자를 위한 세계</title>
+    <!--link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" rel="stylesheet" />
+    
     <style>
       .py-cus
       {
@@ -21,13 +24,12 @@
         font-size: 1.2rem;
       }
 
-      /* Large screen 이상 */
       @media (min-width: 992px) {
         .custom-gap {
           gap: 10rem;
         }
       }
-      /* Medium 이하 화면 */
+
       @media (max-width: 991.98px) {
           .custom-gap {
             gap: 1rem;
@@ -55,16 +57,24 @@
         top: 20px; /* 화면 상단에서 20px 떨어진 위치에 고정 */
         height: calc(100vh - 20px); /* 높이 계산 */
       }
+
+      .codeArea
+      {
+        background-color: lightgray;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
     </style>
   </head>
   <body>
     <!-- Navbar block -->
     <nav class="navbar navbar-expand-lg bg-light border-bottom">
       <div class="container-fluid">
-        <!-- 좌측 로고 (오른쪽으로 1rem 이동) -->
+        <!-- 좌측 로고 -->
         <a class="navbar-brand fw-bold logo-text ms-5" href="./index.html">CNW</a>
       
-        <!-- 토글 버튼 (작은 화면용) -->
+        <!-- 토글 버튼 -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -90,7 +100,7 @@
       </div>
     </nav>
 
-    <!--hero tag-->
+    <!--hero block-->
     <div class="container-fluid my-3">
       <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg hero-text" style="background-color: #1976D2;">
         <!-- 텍스트 영역 -->
@@ -103,7 +113,7 @@
           </p>
         </div>
     
-        <!-- 이미지 영역을 Carousel로 변경 -->
+        <!-- 이미지 영역-->
         <div class="col-lg-4 d-flex align-items-center" style="padding-bottom: 3rem; justify-content: flex-start;">
           <div id="imageCarousel" class="carousel slide bg-white rounded-lg-3 shadow-lg" data-bs-ride="carousel" style="width: 75%;">
             <div class="carousel-inner">
@@ -131,30 +141,106 @@
       </div>
     </div>
 
+    <!--main contents block-->
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3">
+          <!--side bar-->
           <div class="sticky-sidebar p-3 bg-light">
             <h4>Sidebar</h4>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#include">#include</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#variable">변수/Variable</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cout">cout</a></li>
+              <li class="nav-item"><a class="nav-link" href="#cin">cin</a></li>
             </ul>
           </div>
         </div>
+        <!--main contents-->
         <div class="col-md-9">
           <div class="content p-3">
-            <h1>Main Content</h1>
-            <p>스크롤하면 사이드바가 따라옵니다!</p>
-            <p>여러 줄의 콘텐츠를 추가하여 스크롤을 만들어 보세요...</p>
-            <div style="height: 1500px;"></div> <!-- 긴 스크롤 영역 -->
+            <!--include-->
+            <h1 id="include">#include</h1>
+            <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+  
+  int main() {
+      std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;
+      return 0;
+  }
+            </code></pre>
+            <p>내용 추가 바람</p>
+            <hr>
+            <!--Variable-->
+            <h1 id="variable">variable</h1>
+            <pre><code class="language-cpp"> 
+  #include &lt;iostream&gt;
+
+  int main(){
+      int i = 10;
+      double pie = 3.14
+      char ch = 'a';
+      bool flag = true;
+
+      std::cout &lt;&lt; i &lt;&lt; std::endl; // 정수형 변수(Integer)
+      std::cout &lt;&lt; pie &lt;&lt; std::endl; // 실수형 변수
+      std::cout &lt;&lt; ch &lt;&lt; std::endl; // 문자형 변수(character)
+      std::cout &lt;&lt; flag &lt;&lt; std::endl; // 진위형 변수(True/False)
+
+      return 0;
+  }
+            </code></pre>
+            <p>input text</p>
+            <hr>
+            <!--cout-->
+            <h1 id="cout">cout</h1>
+            <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+
+  int main(){
+      std::cout &lt;&lt; "콘솔 창에 원하는 내용을 출력하는 함수입니다.";
+      return 0;
+  }
+            </code></pre>
+            <p>input text</p>
+            <hr>
+            <!--cin-->
+            <h1 id="cin">cin</h1>
+            <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+
+  int main(){
+      int number;
+      std::cout &lt;&lt; "숫자를 입력하세요. : ";
+      std::cin &gt;&gt; number;
+      std::cout &lt;&lt; "\n입력하신 숫자는 " &lt;&lt; number &lt;&lt; "입니다.\n";
+      return 0;
+  }
+            </code></pre>
+            <p>input text</p>
+            <hr>
+            <!--Pointer-->
+            <h1 id="pointer">Pointer</h1>
+            <pre><code class="language-cpp">
+  #include &lt;iostream&gt;
+
+  int main(){
+      int number;
+      std::cout &lt;&lt; "숫자를 입력하세요. : ";
+      std::cin &gt;&gt; number;
+      std::cout &lt;&lt; "\n입력하신 숫자는 " &lt;&lt; number &lt;&lt; "입니다.\n";
+      return 0;
+  }
+            </code></pre>
+            <p>input text</p>
+            <hr>
           </div>
         </div>
       </div>
     </div>
     
-    <!--footer tag-->
+    
+    <!--footer block-->
     <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
       <!-- 푸터 컨테이너 -->
       <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
@@ -198,6 +284,9 @@
           </div>
       </div>
     </footer>
+    <!--java script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
   </body>
 </html>
