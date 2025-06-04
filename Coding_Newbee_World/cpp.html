@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>코딩 입문자를 위한 세계</title>
+    <title>코딩 입문자를 위한 세계 with C++</title>
     <!--link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -39,12 +39,12 @@
       .hero-text h1 {
         font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
         font-weight: 700;
-        color: white; /* 메인 텍스트 색상 */
+        color: white;
         text-shadow:
           -1px -1px 0 #fff,
            1px -1px 0 #fff,
           -1px  1px 0 #fff,
-           1px  1px 0 #fff; /* 외곽선 효과 */
+           1px  1px 0 #fff;
       }
      
       .p {
@@ -54,8 +54,8 @@
 
       .sticky-sidebar {
         position: sticky;
-        top: 20px; /* 화면 상단에서 20px 떨어진 위치에 고정 */
-        height: calc(100vh - 20px); /* 높이 계산 */
+        top: 20px;
+        height: calc(100vh - 20px);
       }
 
       .codeArea
@@ -161,6 +161,8 @@
               <li class="nav-item"><a class="nav-link active linkdeco" href="#variable">변수/Variable</a></li>
               <li class="nav-item"><a class="nav-link linkdeco" href="#cin">cin</a></li>
               <li class="nav-item"><a class="nav-link linkdeco" href="#pointer">pointer</a></li>
+              <li class="nav-item"><a class="nav-link linkdeco" href="#array">배열/Array</a></li>
+              <li class="nav-item"><a class="nav-link linkdeco" href="#string">문자열/string</a></li>
               <li class="nav-item"><a class="nav-link linkdeco" href="#new/delete">new/delete</a></li>
             </ul>
           </div>
@@ -178,6 +180,10 @@
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    Hello, World!
+              </code></pre>
             <p>
               <strong>#include &lt;iostream&gt;</strong>는 C++에서 기본 입출력(입력: cin, 출력: cout)을 사용할 수 있게 해주는 명령어입니다. <br>
               이 예제는 C++ 프로그램의 기본 구조를 보여주는 "Hello, World!" 출력 코드입니다. <br>
@@ -185,23 +191,29 @@
             </p>
             <hr>
             <!--cout-->
-            <h1 id="cout">cout</h1>
+            <h1 id="cout">cout / endl</h1>
             <pre><code class="language-cpp">
     #include &lt;iostream&gt;
 
     int main(){
-        std::cout &lt;&lt; "콘솔 창에 원하는 내용을 출력하는 함수입니다.";
+        std::cout &lt;&lt; "콘솔 창에 원하는 내용을 출력하는 함수입니다." &lt;&lt; std::endl;
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    콘솔 창에 원하는 내용을 출력하는 함수입니다.
+              </code></pre>
             <p>
-              <strong>cout</strong>은 "Character Output"의 줄임말로, 콘솔 창(터미널)에 내용을 보여주는 역할을 해요.<br>
+              <strong>cout</strong>은 "Character Output"의 줄임말로, 콘솔 창(터미널)에 내용을 보여주는 역할을 합니다.<br>
               <code>&lt;&lt;</code> 연산자는 "보낸다"라는 뜻으로, 오른쪽에 있는 값을 왼쪽(cout)에 전달해 출력하는 방식입니다.<br>
-              예를 들어 위 코드는 사용자가 콘솔 창에서 메시지를 볼 수 있도록 하는 아주 기본적인 출력 방법이에요.
+              예를 들어 위 코드는 사용자가 콘솔 창에서 메시지를 볼 수 있도록 하는 아주 기본적인 출력 방법입니다.<br>
+              <strong>endl</strong>은 "End Line"의 줄임말로, 새로운 줄을 만들어주는 역할을 합니다.<br>
+              같은 의미로 '<strong>\n'</strong>도 있습니다.<br>
             </p>
             <hr>
             <!--Variable-->
-            <h1 id="variable">variable</h1>
+            <h1 id="variable">Variable</h1>
             <pre><code class="language-cpp"> 
     #include &lt;iostream&gt;
   
@@ -219,6 +231,13 @@
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    10
+    3.14
+    a
+    1 // false은 0, true는 1
+              </code></pre>
             <p>
               <strong>변수(Variable)</strong>는 데이터를 저장하는 이름 있는 공간입니다.<br>
               - <code>int</code>: 정수를 저장할 수 있습니다. 예: 10<br>
@@ -241,6 +260,11 @@
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    숫자를 입력하세요. : 64
+    입력하신 숫자는 64입니다.
+              </code></pre>
             <p>
               <strong>cin</strong>은 "Character Input"의 줄임말로, 사용자로부터 값을 입력받을 때 사용합니다.<br>
               <code>&gt;&gt;</code> 연산자는 오른쪽에 있는 변수로 값을 받아오는 동작을 의미합니다.<br>
@@ -261,6 +285,10 @@
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    10
+              </code></pre>
             <p>
               포인터는 <strong>집 주소</strong>에 비유하면 이해하기가 더 쉽습니다.<br><br>
             
@@ -275,6 +303,79 @@
               정리하면, 포인터는 "주소를 저장하고 그 주소를 따라가 값을 가져오는 방법"이라고 이해할 수 있습니다.
             </p>     
             <hr>
+            <!--array-->
+            <h1 id="array">array</h1>
+            <pre><code class="language-cpp">
+    #include &lt;iostream&gt;
+  
+    int main(){
+        int numArray[3];
+        numArray[0] = 1;
+        numArray[1] = 10;
+        numArray[2] = 100;
+        // num Array[3] = 100; 배열의 크기가 3개이기 때문에 더 넣으면 Index Error
+        std::cout &lt;&lt; numArray[0] &lt;&lt; ' ' &lt;&lt; numArray[1] &lt;&lt; ' ' &lt;&lt; numArray[2] &lt;&lt; '\n';
+        return 0;
+    }
+            </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    1 10 100
+              </code></pre>
+            <p>
+              <strong>배열(array)</strong>은 <strong>같은 종류의 데이터를 한 줄로 정리해 놓은 것</strong>이라고 생각하면 이해하기 쉽습니다.<br><br>
+            
+              예를 들어, 학생들의 시험 점수를 저장한다고 할 때, <code>int score1, score2, score3;</code>처럼 하나하나 변수를 만들 수도 있지만, <code>int scores[3];</code>처럼 배열을 사용하면 훨씬 더 간단하게 처리할 수 있습니다.<br><br>
+            
+              위 코드에서는 <code>int numArray[3];</code>를 통해 정수형 값을 3개 저장할 수 있는 배열을 만들었습니다.<br><br>
+            
+              - <code>numArray[0] = 1;</code> : 배열의 첫 번째 칸에 1을 저장합니다 (C++에서 배열은 0부터 시작해요).<br>
+              - <code>numArray[1] = 10;</code> : 두 번째 칸에 10을 저장합니다.<br>
+              - <code>numArray[2] = 100;</code> : 세 번째 칸에 100을 저장합니다.<br><br>
+            
+              만약 <code>numArray[3]</code>처럼 <strong>없는 칸</strong>에 값을 넣으려고 하면, 프로그램이 잘못된 메모리에 접근하게 되어 <strong>오류(Index Error)</strong>가 발생합니다.<br><br>
+            
+              정리하자면, 배열은 <strong>동일한 타입의 데이터를 연속적으로 저장할 수 있는 공간</strong>이며, 인덱스를 통해 하나하나 접근할 수 있습니다. <strong>주의할 점은 인덱스는 0부터 시작하고, 배열의 크기를 넘지 않아야 한다는 것</strong>입니다!
+            </p>
+            <hr>
+            <!--string-->
+            <h1 id="string">문자열 / string</h1>
+            <pre><code class="language-cpp">
+    #include &lt;iostream&gt;
+    #include &lt;string&gt;
+  
+    int main(){
+        char cstr[100] = "C스타일 문자열"; // C에서는 char 배열로 문자열을 표현
+        std::string str = "C++스타일 문자열"; // C++에서는 string이 정의되어 있기 때문에 string을 사용
+
+        std::cout &lt;&lt; "C 스타일 문자열 : " &lt;&lt; cstr &lt;&lt; std::endl;
+        std::cout &lt;&lt; "C++ 스타일 문자열 : " &lt;&lt; str &lt;&lt; std::endl;
+        return 0;
+    }
+            </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    C 스타일 문자열 : C스타일 문자열  
+    C++ 스타일 문자열 : C++스타일 문자열
+              </code></pre>
+              <br>
+            <p>
+              문자열은 글자들을 모아놓은 데이터라고 생각하시면 됩니다. 예를 들어 <code>"안녕하세요"</code>, <code>"Hello"</code> 같은 말들이 전부 문자열입니다.<br><br>
+            
+              C++에서는 문자열을 표현하는 방법이 <strong>두 가지</strong>가 있습니다.<br><br>
+            
+              <strong>C 스타일 문자열</strong>  
+              - <code>char cstr[100] = "C스타일 문자열";</code><br>
+              - 이건 문자 하나하나를 배열로 저장하는 방식입니다.<br>
+              - 즉, 글자들을 <code>char</code>라는 자료형의 배열에 넣는 거예요.<br>
+              - 끝에 <code>'\0'</code>라는 특수문자가 자동으로 붙어서 문자열의 끝을 표시합니다.<br><br>
+            
+              <strong>C++ 스타일 문자열</strong>  
+              - <code>std::string str = "C++스타일 문자열";</code><br>
+              - C++에서는 <code>string</code>이라는 더 편한 문자열 자료형이 따로 제공됩니다.<br>
+              - 문자열끼리 더하거나, 길이를 재거나, 비교하는 기능도 훨씬 간단하게 사용할 수 있어요.<br><br>
+            </p>
+            <hr>
             <!--new/delete-->
             <h1 id="new/delete">new/delete</h1>
             <pre><code class="language-cpp">
@@ -283,14 +384,28 @@
     int main(){
         int newExampleAddress = new int(100);
         std::cout &lt;&lt; *newExampleAddress &lt;&lt; '\n';
-        delete(newExampleAddress)
+        delete newExampleAddress;
         return 0;
     }
             </code></pre>
+            <h4>출력 화면</h4>
+              <pre><code class="language-cpp">
+    100
+              </code></pre>
             <p>
-
-            </p>     
-            <hr>
+              프로그램 실행 중에 새로운 공간을 만들어서 데이터를 저장하고 싶을 때 사용하는 <code>new</code>와 <code>delete</code>에 대해 알아보겠습니다.<br><br>
+            
+              쉽게 말해, <strong><code>new</code>는 집을 새로 짓는 것</strong>이고, <strong><code>delete</code>는 그 집을 철거하는 것</strong>이라고 볼 수 있습니다.<br><br>
+            
+              - <code>new int(100);</code>은 <strong>100이라는 값을 담을 수 있는 집을 새로 짓고</strong>, 그 주소를 반환합니다.<br>
+              - <code>int* newExampleAddress</code>는 그 새로 지은 집의 주소를 받아 저장합니다.<br>
+              - <code>*newExampleAddress</code>는 그 집 안에 들어 있는 값, 즉 100을 꺼내서 출력합니다.<br>
+              - <code>delete newExampleAddress;</code>는 다 쓴 집(메모리 공간)을 <strong>철거</strong>합니다. 메모리는 한정되어 있기 때문에 다 쓴 공간은 꼭 이렇게 정리해 줘야 합니다<br><br>
+            
+              정리하자면, <strong><code>new</code>는 동적으로 메모리를 생성</strong>할 때 사용하고, <strong><code>delete</code>는 그 메모리를 정리</strong>할 때 사용합니다.<br><br>
+            
+              만약 <code>delete</code>를 하지 않으면 컴퓨터가 기억해야 할 정보가 계속 쌓여서, <strong>메모리 누수</strong>라는 문제가 생길 수도 있습니다.
+            </p>
       </div>
     </div>
     
